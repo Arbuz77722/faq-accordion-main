@@ -1,0 +1,17 @@
+@media (max-width: 38em) {
+  body {
+    background-image: url(assets/images/background-pattern-mobile.svg);
+  }
+
+  .accordion {
+    max-width: 40rem;
+  }
+
+  .item {
+    grid-template-columns: 1fr;
+  }
+
+  .icons {
+    grid-column: 2;
+  }
+}

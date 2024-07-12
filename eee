@@ -1,0 +1,129 @@
+@font-face {
+  font-family: "WorkSans";
+  font-display: swap;
+  font: 400 700;
+  src: url(assets/fonts/WorkSans-VariableFont_wght.ttf) format("truetype");
+}
+:root {
+  /* Colors */
+  --white: hsl(0, 0%, 100%);
+  --light-pink: hsl(275, 100%, 97%);
+  --grayish-purple: hsl(292, 16%, 49%);
+  --dark-purple: hsl(292, 42%, 14%);
+
+  /* Typography */
+  --ff-default: "WorkSans", sans-serif;
+  --fs-p: 16px;
+  --fw-normal: 400;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  font-family: var(--ff-default);
+  background-image: url(assets/images/background-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: var(--light-pink);
+}
+.accordion {
+  background-color: var(--white);
+  max-width: 60rem;
+  display: flex;
+  padding: 1.5rem;
+  margin: 1rem;
+  flex-direction: column;
+  border-radius: 1.1rem;
+}
+
+.faq-header {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq-title {
+  font-size: 4rem;
+  font-weight: var(--fw-bold);
+}
+.item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 2px solid var(--light-pink);
+}
+.text {
+  font-size: var(--fs-p);
+  font-weight: var(--fw-bold);
+  font-family: var(--ff-default);
+  padding: 2rem;
+}
+.icons {
+  display: flex;
+}
+
+.icon-minus {
+  stroke: var(--dark-purple);
+  /* display: none; */
+}
+.hidden-box {
+  grid-column: 1;
+  display: none;
+}
+.hidden-box p {
+  font-size: var(--fs-p);
+  padding: 2rem;
+  color: var(--grayish-purple);
+}
+
+.open .hidden-box {
+  display: block;
+}
+
+.open .icon-plus {
+  display: none;
+}
+
+.open .icon-minus {
+  display: block;
+}
+.no-border-top {
+  border: none;
+}
